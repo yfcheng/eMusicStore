@@ -21,7 +21,7 @@ public class ProductDao {
         product1.setUnitInStock(11);
         product1.setProductManufacturer("Fender");
 
-        productList=new ArrayList<Product>();
+        productList = new ArrayList<Product>();
         productList.add(product1);
 
         return productList;
