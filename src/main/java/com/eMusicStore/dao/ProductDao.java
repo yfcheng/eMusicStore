@@ -21,8 +21,32 @@ public class ProductDao {
         product1.setUnitInStock(11);
         product1.setProductManufacturer("Fender");
 
+        Product product2 = new Product();
+
+        product2.setProductName("Record1");
+        product2.setProductCategory("Instrument");
+        product2.setProductDescription("This is a new guitar!");
+        product2.setProductPrice(1200);
+        product2.setProductCondition("new");
+        product2.setProductStatus("Active");
+        product2.setUnitInStock(11);
+        product2.setProductManufacturer("Fender");
+
+        Product product3 = new Product();
+
+        product3.setProductName("Violin");
+        product3.setProductCategory("Instrument");
+        product3.setProductDescription("This is a new Violin!");
+        product3.setProductPrice(1200);
+        product3.setProductCondition("new");
+        product3.setProductStatus("Active");
+        product3.setUnitInStock(11);
+        product3.setProductManufacturer("Fender");
+
         productList = new ArrayList<Product>();
         productList.add(product1);
+        productList.add(product2);
+        productList.add(product3);
 
         return productList;
     }

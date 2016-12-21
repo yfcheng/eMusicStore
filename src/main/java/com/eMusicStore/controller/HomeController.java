@@ -1,12 +1,13 @@
 package com.eMusicStore.controller;
 
-import com.eMusicStore.dao.ProductDao;
-import com.eMusicStore.model.Product;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
+import com.eMusicStore.dao.ProductDao;
+import com.eMusicStore.model.Product;
 
 @Controller
 public class HomeController {
@@ -21,9 +22,8 @@ public class HomeController {
 
     @RequestMapping("/productList")
     public String getProducts(Model model) {
-        List<Product> productList = productDao.getProductList();
-        Product product = productList.get(0);
-        model.addAttribute(product);
+        List<Product> products = productDao.getProductList();
+        model.addAttribute("products", products);
 
         return "productList";
     }
